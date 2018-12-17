@@ -31,7 +31,7 @@
 
 	<?php spk_minimal_wordpress_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content sep-after sep-after__level-two">
 		<?php
 		the_content( sprintf(
 			wp_kses(

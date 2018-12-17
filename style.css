@@ -10585,9 +10585,15 @@ a:hover, a:active {
   content: "";
   display: block;
   width: 4em;
-  margin-top: 2.5em;
-  margin-bottom: 2.5em;
   border-bottom: 0.125em solid #36C9C6;
+  margin-top: 1.5em;
+  margin-bottom: 2.5em;
+}
+
+.sep-after.sep-after__level-two:after, .sep-before.sep-after__level-two:before {
+  border-bottom-color: #ccc;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .cat-links {

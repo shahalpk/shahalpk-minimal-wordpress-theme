@@ -36,9 +36,15 @@
     content: "";
     display: block;
     width: 4em;
-    margin-top: 2.5em;
-    margin-bottom: 2.5em;
-    border-bottom: .125em solid $color__post-seperator;
+	border-bottom: .125em solid $color__post-seperator;
+	margin-top: 1.5em;
+	margin-bottom: 2.5em;
+}
+
+.sep-after.sep-after__level-two:after, .sep-before.sep-after__level-two:before {
+    border-bottom-color: $color__post-seperator__level-two;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 }
 
 .cat-links {
