@@ -108,7 +108,7 @@ function spk_minimal_wordpress_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', 'spk-minimal-wordpress' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'spk-minimal-wordpress' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="widget less-important-block %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
@@ -121,6 +121,7 @@ add_action( 'widgets_init', 'spk_minimal_wordpress_widgets_init' );
  */
 function spk_minimal_wordpress_scripts() {
 	wp_enqueue_style( 'spk-minimal-wordpress-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'spk-minimal-fa', 'https://use.fontawesome.com/releases/v5.6.1/css/all.css');
 
 	wp_enqueue_script( 'spk-minimal-wordpress-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

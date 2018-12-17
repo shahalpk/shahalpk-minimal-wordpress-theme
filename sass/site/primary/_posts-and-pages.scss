@@ -21,3 +21,26 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.entry-meta {
+	> span {
+		font-style: italic;
+		margin-right: 1em;
+		i {
+			font-size:0.9em;
+		}
+	}
+}
+
+.sep-after:after, .sep-before:before {
+    content: "";
+    display: block;
+    width: 4em;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+    border-bottom: .125em solid $color__post-seperator;
+}
+
+.cat-links {
+	margin-bottom:1em;
+}

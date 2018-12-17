@@ -26,11 +26,11 @@ if ( ! function_exists( 'spk_minimal_wordpress_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'spk-minimal-wordpress' ),
+			esc_html_x( '%s', 'post date', 'spk-minimal-wordpress' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
-		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+		echo '<span class="posted-on"><i class="fas fa-calendar-day"></i> &nbsp;' . $posted_on . '</span>'; // WPCS: XSS OK.
 
 	}
 endif;
@@ -42,11 +42,11 @@ if ( ! function_exists( 'spk_minimal_wordpress_posted_by' ) ) :
 	function spk_minimal_wordpress_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'spk-minimal-wordpress' ),
+			esc_html_x( '%s', 'post author', 'spk-minimal-wordpress' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+		echo '<span class="byline"><i class="fas fa-user"></i> ' . $byline . '</span>'; // WPCS: XSS OK.
 
 	}
 endif;
@@ -62,14 +62,14 @@ if ( ! function_exists( 'spk_minimal_wordpress_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', 'spk-minimal-wordpress' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'spk-minimal-wordpress' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<div class="cat-links"><i class="fas fa-folder"></i> &nbsp;' . esc_html__( '%1$s', 'spk-minimal-wordpress' ) . '</div>', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'spk-minimal-wordpress' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'spk-minimal-wordpress' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<div class="tags-links"><i class="fas fa-tag"></i> &nbsp;' . esc_html__( '%1$s', 'spk-minimal-wordpress' ) . '</div>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 

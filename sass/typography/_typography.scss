@@ -10,6 +10,14 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: inherit;
+	@include font-size(2);
+	font-weight: 700;
+	line-height: 1.2;
+	margin:0 0 .625em;
+}
+
 @import "headings";
 
 @import "copy";

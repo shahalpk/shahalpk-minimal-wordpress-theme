@@ -53,7 +53,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<footer class="entry-footer sep-after sep-after__level-one">
 		<?php spk_minimal_wordpress_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

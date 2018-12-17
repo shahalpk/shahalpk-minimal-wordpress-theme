@@ -10014,10 +10014,19 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-size: 32px;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.625em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -10053,7 +10062,7 @@ pre {
 }
 
 code, kbd, tt, var {
-  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 15px;
   font-size: 0.9375rem;
 }
@@ -10099,7 +10108,7 @@ hr {
 }
 
 ul, ol {
-  margin: 0 0 1.5em 3em;
+  margin: 0 0 1.5em 2em;
 }
 
 ul {
@@ -10151,7 +10160,7 @@ input[type=submit] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
-  background: #e6e6e6;
+  background: #ED6A5A;
   color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
   font-size: 0.75rem;
@@ -10229,13 +10238,13 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue;
+  color: #212121;
 }
 a:visited {
-  color: purple;
+  color: #212121;
 }
 a:hover, a:focus, a:active {
-  color: midnightblue;
+  color: #37474f;
 }
 a:focus {
   outline: thin dotted;
@@ -10252,6 +10261,23 @@ a:hover, a:active {
   display: block;
   float: left;
   width: 100%;
+  text-transform: uppercase;
+  margin-bottom: 1.5em;
+}
+.main-navigation a {
+  color: #9BC1BC;
+}
+.main-navigation a:visited {
+  color: #9BC1BC;
+}
+.main-navigation a:hover, .main-navigation a:focus, .main-navigation a:active {
+  color: #36C9C6;
+}
+.main-navigation a:focus {
+  outline: thin dotted;
+}
+.main-navigation a:hover, .main-navigation a:active {
+  outline: 0;
 }
 .main-navigation ul {
   display: none;
@@ -10276,6 +10302,15 @@ a:hover, a:active {
 }
 .main-navigation ul ul a {
   width: 200px;
+  color: #9BC1BC;
+}
+.main-navigation ul ul :hover > a,
+.main-navigation ul ul .focus > a {
+  color: #36C9C6;
+}
+.main-navigation ul ul a:hover,
+.main-navigation ul ul a.focus {
+  color: #36C9C6;
 }
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
@@ -10289,6 +10324,13 @@ a:hover, a:active {
   display: block;
   text-decoration: none;
 }
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+  font-weight: 700;
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -10430,9 +10472,80 @@ a:hover, a:active {
   max-width: 100%;
 }
 
+.widget_search h1, .widget_search h2, .widget_search h3, .widget_search h4, .widget_search h5, .widget_search h6,
+.widget_recent_entries h1,
+.widget_recent_entries h2,
+.widget_recent_entries h3,
+.widget_recent_entries h4,
+.widget_recent_entries h5,
+.widget_recent_entries h6,
+.widget_recent_comments h1,
+.widget_recent_comments h2,
+.widget_recent_comments h3,
+.widget_recent_comments h4,
+.widget_recent_comments h5,
+.widget_recent_comments h6,
+.widget_archive h1,
+.widget_archive h2,
+.widget_archive h3,
+.widget_archive h4,
+.widget_archive h5,
+.widget_archive h6,
+.widget_categories h1,
+.widget_categories h2,
+.widget_categories h3,
+.widget_categories h4,
+.widget_categories h5,
+.widget_categories h6,
+.widget_meta h1,
+.widget_meta h2,
+.widget_meta h3,
+.widget_meta h4,
+.widget_meta h5,
+.widget_meta h6 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+.widget_search ul,
+.widget_recent_entries ul,
+.widget_recent_comments ul,
+.widget_archive ul,
+.widget_categories ul,
+.widget_meta ul {
+  margin: 0;
+  list-style-type: none;
+}
+.widget_search ul li,
+.widget_recent_entries ul li,
+.widget_recent_comments ul li,
+.widget_archive ul li,
+.widget_categories ul li,
+.widget_meta ul li {
+  margin: 0 0 0.8em;
+  line-height: 1.2;
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+#page {
+  margin-top: 3em;
+}
+
+.leftcol {
+  text-align: right;
+}
+
+.less-important-block {
+  color: #707070;
+}
+.less-important-block a, .less-important-block h1, .less-important-block h2, .less-important-block h3, .less-important-block h4, .less-important-block p, .less-important-block li {
+  color: inherit;
+}
+.less-important-block:hover {
+  color: #404040;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -10458,6 +10571,27 @@ a:hover, a:active {
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
+}
+
+.entry-meta > span {
+  font-style: italic;
+  margin-right: 1em;
+}
+.entry-meta > span i {
+  font-size: 0.9em;
+}
+
+.sep-after:after, .sep-before:before {
+  content: "";
+  display: block;
+  width: 4em;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  border-bottom: 0.125em solid #36C9C6;
+}
+
+.cat-links {
+  margin-bottom: 1em;
 }
 
 /*--------------------------------------------------------------
@@ -10508,6 +10642,7 @@ object {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
   display: inline-block;
+  width: 5em;
 }
 
 /*--------------------------------------------------------------

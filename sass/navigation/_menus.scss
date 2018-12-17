@@ -3,6 +3,28 @@
 	display: block;
 	float: left;
 	width: 100%;
+	text-transform: uppercase;
+	margin-bottom: 1.5em;
+
+	a {
+		color: $color__navbar_link;
+	
+		&:visited {
+			color: $color__navbar_link-visited;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color__navbar_link-hover;
+		}
+		&:focus {
+			outline: thin dotted;
+		}
+		&:hover,
+		&:active {
+			outline: 0;
+		}
+	}	
 
 	ul {
 		display: none;
@@ -32,14 +54,17 @@
 
 			a {
 				width: 200px;
+				color: $color__navbar_link;
 			}
 
 			:hover > a,
 			.focus > a {
+				color: $color__navbar_link-hover;
 			}
 
 			a:hover,
 			a.focus {
+				color: $color__navbar_link-hover
 			}
 		}
 
@@ -67,6 +92,7 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		font-weight: 700;
 	}
 }
 
